@@ -26,3 +26,19 @@ This project is built using the standard GCC compiler. To run the simulation and
 2. Compile the core system:
    ```bash
    gcc task_sim.c vigil_algo.c -o vigil_system.exe
+
+## 📊 System State Machine Flowchart
+```mermaid
+stateDiagram-v2
+    direction TB
+    
+    [*] --> HEALTHY : System Boot
+    
+    HEALTHY --> SUSPECT : Anomaly Detected\n(Z-Score / CUSUM drift)
+    
+    SUSPECT --> HEALTHY : Transient Noise\n(N-of-M fails)
+    SUSPECT --> CONFIRMED : Fault Validated\n(N-of-M met)
+    
+    CONFIRMED --> RECOVERING : Broadcast 32-Byte Alert\n(ESP-NOW)
+    
+    RECOVERING --> HEALTHY : Manual Reset / Reboot Command
