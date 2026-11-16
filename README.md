@@ -1,6 +1,6 @@
 # VIGIL-S3: Cloud-Free Self-Diagnosis Runtime
 
-**VIGIL-S3** is a lightweight, edge-based anomaly detection system designed for ESP32-S3 microcontroller networks. Built for the Smart India Hackathon, this project enables embedded devices to self-diagnose hardware faults—such as slow heating, power surges, and communication bus failures—without relying on cloud computing or heavy floating-point mathematics.
+**VIGIL-S3** is a lightweight, edge-based anomaly detection system designed for ESP32-S3 microcontroller networks.This project enables embedded devices to self-diagnose hardware faults—such as slow heating, power surges, and communication bus failures—without relying on cloud computing or heavy floating-point mathematics.
 
 ## 🧠 System Architecture & Philosophy
 In memory-constrained embedded environments, heavy mathematical libraries drain CPU cycles and memory. VIGIL-S3 utilizes **integer-only mathematics** to process live sensor data in a fraction of a second.
